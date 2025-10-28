@@ -8,6 +8,7 @@ body {
     padding: 10px;
     background-color: #f0f0f0;
     color: #000000;
+    overflow-x: hidden;
 }
 
 .container {
