@@ -5,7 +5,7 @@ body {
     /* width: 380px; <--- ELIMINADO: Ahora es flexible */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     background-color: #f0f0f0;
     color: #000000;
     overflow-x: hidden;
