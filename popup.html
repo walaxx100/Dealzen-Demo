@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+<head>
+    <title>DealZen Comparador</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="icons/dealzen_logo.png" alt="DealZen Logo" class="logo">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Ej: Mouse gamer">
+                <button id="search-button">
+                    <img src="icons/search_icon.png" alt="Buscar" id="search-icon-img">
+                </button>
+            </div>
+        </header>
+
+        <div id="product-header-container">
+            
+        </div>
+        
+        <div id="results-container" class="results-container">
+            <p class="placeholder-text">Encuentra siempre el mejor precio en línea sin perder tiempo.</p>
+        </div>
+
+        <div id="chart-wrapper" class="chart-container"> 
+            <h3>Historial de Precios</h3>
+            <canvas id="priceChart"></canvas>
+        </div>
+
+        <div id="ad-container">
+            <p>Espacio Publicitario</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

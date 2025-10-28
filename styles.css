@@ -1,0 +1,240 @@
+body {
+    width: 380px; /* Un poco más ancho para el nuevo diseño */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #000000; /* Asegurar texto negro */
+}
+
+.container {
+    border: 3px solid #ffffff; /* Borde azul oscuro */
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.search-box {
+    display: flex;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    /* --- MODIFICACIÓN CLAVE: Aumentar el radio para que se vea más grande --- */
+    border-radius: 30px; 
+    overflow: hidden;
+    /* Opcional: Centrar verticalmente en el header si es necesario */
+    height: 50px; /* Le damos una altura fija un poco más grande */
+}
+
+#search-input {
+    flex-grow: 1;
+    border: none;
+    /* --- MODIFICACIÓN CLAVE: Aumentar el padding vertical para más altura --- */
+    padding: 10px 10px; /* De 5px a 10px */
+    outline: none;
+    font-size: 1.1em; /* Opcional: Aumentar el tamaño de la fuente para que se vea mejor */
+}
+
+#search-button {
+    background-color: transparent;
+    border: none;
+    /* Esto mueve el ícono a la izquierda */
+    padding: 5px 5px 5px 5px; 
+    cursor: pointer;
+    outline: none;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#search-icon-img {
+    width: 25px;   /* Tamaño del icono */
+    height: 25px;
+    object-fit: contain;
+}
+
+/* --- NUEVOS ESTILOS PARA EL ENCABEZADO DEL PRODUCTO (Imagen y Título Centralizados) --- */
+#product-header-container {
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc; /* Separador sutil */
+}
+
+#product-header-container h2 {
+    font-size: 1.2em;
+    margin: 5px 0 10px 0;
+    font-weight: bold;
+}
+
+#product-header-image {
+    width: 150px;  /* Imagen más grande para el encabezado */
+    height: 150px;
+    object-fit: contain;
+}
+/* --- FIN ESTILOS NUEVOS --- */
+
+.results-container {
+    margin-bottom: 15px;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: #888;
+}
+
+.store-card:last-child {
+    margin-bottom: 0;
+}
+
+.store-logo {
+    width: 60px; /* Tamaño del logo de la tienda */
+    height: 60px;
+    object-fit: contain; /* Para que la imagen no se recorte */
+}
+
+.store-card {
+    border: 1px solid #ccc;
+    border-radius: 20px; 
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; 
+    gap: 25px; /* Separación entre logo y contenido */
+    position: relative; 
+    /* --- CLAVE: Permitir que el contenido (detalles + íconos) ocupe espacio --- */
+    justify-content: space-between; 
+}
+
+.product-details {
+    /* Mantenemos flex-grow: 1 para que ocupe espacio y centre bien */
+    flex-grow: 1; 
+    text-align: center; 
+    /* Añadido para asegurar que los detalles y los íconos no se mezclen */
+    min-width: 120px; 
+}
+
+.feature-icons {
+    display: flex;
+    flex-direction: row; /* CAMBIO: Ahora se alinean de izquierda a derecha */
+    align-items: center; /* Asegura que estén centrados verticalmente entre sí */
+    justify-content: center; /* Centra el grupo de íconos */
+    padding-right: 10px; 
+    font-size: 1.1em; 
+    gap: 10px; /* Espacio horizontal entre cada icono */
+}
+
+/* Estilo para un ícono individual (sin cambios mayores) */
+.feature-icon {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Colores para el estado de las características */
+.feature-available {
+    color: #2ECC71; /* Verde brillante para disponible */
+}
+
+/* Modificación clave: Aumentamos la especificidad del selector para que no sea sobrescrito */
+.feature-icon.feature-unavailable {
+    color: #95A5A6; /* Gris neutro para no disponible */
+    opacity: 0.15;  /* Opcional: Reducir la opacidad para que parezca menos activo */
+}
+
+/* ... otros estilos de store-card ... */
+
+/* --- NUEVOS ESTILOS PARA LA ETIQUETA "MEJOR COMPRA" --- */
+.best-buy-badge {
+    position: absolute;
+    top: -10px; /* Ajusta esto para moverlo más arriba o más abajo */
+    right: -10px; /* Ajusta esto para moverlo más a la derecha o izquierda */
+    background-color: #FFD700; /* Color dorado para la estrella */
+    color: #333; /* Texto oscuro */
+    padding: 3px 8px;
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 0.75em;
+    font-weight: bold;
+    border: 1px solid #c0a000; /* Borde para que resalte más */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Sombra para dar profundidad */
+    transform: rotate(5deg); /* Opcional: un poco inclinado para darle un toque divertido */
+}
+/* .product-image style REMOVIDO, ya no se usa */
+
+.product-details {
+    flex-grow: 1; /* Permite que los detalles ocupen el espacio restante */
+}
+
+.store-name {
+    font-weight: bold;
+    color: #000080;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #C0392B; /* Rojo */
+    display: block; 
+    margin-top: 5px;
+}
+
+.product-link {
+    font-size: 0.9em;
+    color: #007bff; /* Azul para enlaces */
+    text-decoration: none;
+}
+
+.product-link:hover {
+    text-decoration: underline;
+}
+
+.chart-container {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: none; 
+}
+
+.chart-container h3 {
+    text-align: center;
+    margin-top: 0; 
+    margin-bottom: 15px; 
+}
+
+#ad-container {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 360px; /* Limita al ancho de la app si es más pequeño */
+    height: 100px; /* Altura estándar para un banner */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    
+    /* Estilos para simular un bloque de anuncios */
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+    /* Centrado de contenido de muestra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    font-size: 0.9em;
+    color: #888;
+}
