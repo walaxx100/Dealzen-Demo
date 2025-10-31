@@ -1,8 +1,4 @@
-/* ========================================================= */
-/* MODIFICACIONES CLAVE PARA RESPONSIVE */
-/* ========================================================= */
 body {
-    /* width: 380px; <--- ELIMINADO: Ahora es flexible */
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -12,21 +8,15 @@ body {
 }
 
 .container {
-    /* Permite que crezca en móviles, pero lo limita y centra en PC */
-    width: 100%; /* Ocupa todo el ancho en móvil */
-    max-width: 600px; /* Límite para que no se extienda demasiado en PC */
-    margin: 0 auto; /* Centra el contenedor en PC */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para resaltar como app centrada */
-    
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 3px solid #ffffff; 
     padding: 10px;
     background-color: white;
     border-radius: 8px;
 }
-/* ========================================================= */
-/* FIN MODIFICACIONES CLAVE */
-/* ========================================================= */
-
 
 header {
     display: flex;
@@ -44,15 +34,15 @@ header {
     display: flex;
     flex-grow: 1;
     border: 1px solid #ccc;
-    border-radius: 30px; 
+    border-radius: 30px;
     overflow: hidden;
-    height: 50px; 
+    height: 50px;
 }
 
 #search-input {
     flex-grow: 1;
     border: none;
-    padding: 10px 10px; 
+    padding: 10px 10px;
     outline: none;
     font-size: 1.1em;
 }
@@ -60,7 +50,7 @@ header {
 #search-button {
     background-color: transparent;
     border: none;
-    padding: 5px 5px 5px 5px; 
+    padding: 5px 5px 5px 5px;
     cursor: pointer;
     outline: none;
     display: flex;
@@ -78,6 +68,7 @@ header {
 #product-header-container {
     text-align: center;
     margin-bottom: 15px;
+    position: relative; /* Contenedor para las flechas */
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
 }
@@ -93,6 +84,40 @@ header {
     height: 150px;
     object-fit: contain;
 }
+
+.product-display-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background-color 0.2s;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-arrow.prev { left: 0; }
+.nav-arrow.next { right: 0; }
+
+.hidden { display: none; }
 
 .results-container {
     margin-bottom: 15px;
@@ -115,30 +140,30 @@ header {
 
 .store-card {
     border: 1px solid #ccc;
-    border-radius: 20px; 
+    border-radius: 20px;
     padding: 10px;
     margin-bottom: 10px;
     display: flex;
-    align-items: center; 
-    gap: 25px; 
-    position: relative; 
-    justify-content: space-between; 
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    justify-content: space-between;
 }
 
 .product-details {
-    flex-grow: 1; 
-    text-align: center; 
-    min-width: 120px; 
+    flex-grow: 1;
+    text-align: center;
+    min-width: 120px;
 }
 
 .feature-icons {
     display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center; 
-    padding-right: 10px; 
-    font-size: 1.1em; 
-    gap: 10px; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    font-size: 1.1em;
+    gap: 10px;
 }
 
 .feature-icon {
@@ -153,28 +178,28 @@ header {
 }
 
 .feature-icon.feature-unavailable {
-    color: #95A5A6; 
+    color: #95A5A6;
     opacity: 0.15;
 }
 
 .best-buy-badge {
     position: absolute;
-    top: -10px; 
-    right: -10px; 
-    background-color: #FFD700; 
-    color: #333; 
+    top: -10px;
+    right: -10px;
+    background-color: #FFD700;
+    color: #333;
     padding: 3px 8px;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-size: 0.75em;
     font-weight: bold;
-    border: 1px solid #c0a000; 
-    z-index: 10; 
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); 
+    border: 1px solid #c0a000;
+    z-index: 10;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     transform: rotate(5deg);
 }
 
 .product-details {
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .store-name {
@@ -186,14 +211,14 @@ header {
 .product-price {
     font-size: 1.2em;
     font-weight: bold;
-    color: #C0392B; 
-    display: block; 
+    color: #C0392B;
+    display: block;
     margin-top: 5px;
 }
 
 .product-link {
     font-size: 0.9em;
-    color: #007bff; 
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -205,19 +230,19 @@ header {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    display: none; 
+    display: none;
 }
 
 .chart-container h3 {
     text-align: center;
-    margin-top: 0; 
-    margin-bottom: 15px; 
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 #ad-container {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    max-width: 100%; /* Aseguramos que no se salga del contenedor principal */
-    height: 100px; 
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
     margin-top: 15px;
     margin-bottom: 5px;
     
