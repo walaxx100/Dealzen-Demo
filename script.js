@@ -211,7 +211,7 @@ const STORES = {
         logo: "icons/aeon_logo.png",
         color: 'rgb(75, 192, 192)',
         features: {
-            delivery: false,
+            delivery: true,
             cards: true,
             warranty: true
         }
@@ -221,7 +221,7 @@ const STORES = {
         color: 'rgb(153, 102, 255)',
         features: {
             delivery: true,
-            cards: false,
+            cards: true,
             warranty: true
         }
     },
@@ -230,7 +230,7 @@ const STORES = {
         color: 'rgba(42, 34, 34, 1)',
         features: {
             delivery: true,
-            cards: false,
+            cards: true,
             warranty: true
         }
     },
@@ -239,7 +239,7 @@ const STORES = {
         color: 'rgba(177, 66, 66, 1)',
         features: {
             delivery: true,
-            cards: false,
+            cards: true,
             warranty: true
         }
     },
